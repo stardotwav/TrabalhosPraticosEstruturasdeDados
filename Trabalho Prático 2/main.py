@@ -32,7 +32,8 @@ for i in range(5, 46):
             comparacao.append(comparacoes)
 
 dados = pd.DataFrame.from_dict({'Tamanho': tamanho, 'Comparação': comparacao})
-sns.lineplot(x='Tamanho', y='Comparação', data=dados, color="darkviolet")
+sns.lineplot(x='Tamanho', y='Comparação', data=dados, color="darkviolet", label="Lista de Adjacência")
+plt.yscale('log')
 plt.savefig('graficoGrafoEulerianoListaAdjacencia.png')
 
 # variável para geração do gráfico
@@ -61,7 +62,8 @@ for i in range(5, 46):
             comparacao.append(comparacoes)
 
 dados = pd.DataFrame.from_dict({'Tamanho': tamanho, 'Comparação': comparacao})
-sns.lineplot(x='Tamanho', y='Comparação', data=dados, color="royalblue")
+sns.lineplot(x='Tamanho', y='Comparação', data=dados, color="royalblue", label="Matriz de Adjacência")
+plt.yscale('log')
 plt.savefig('graficoGrafoEulerianoMatrizAdjacencia.png')
 
 # variável para geração do gráfico
@@ -92,5 +94,6 @@ for i in range(5, 46):
             comparacao.append(comparacoes)
 
 dados = pd.DataFrame.from_dict({'Tamanho': tamanho, 'Comparação': comparacao})
-sns.lineplot(x='Tamanho', y='Comparação', data=dados, color="crimson")
+sns.lineplot(x='Tamanho', y='Comparação', data=dados, color="crimson", label="Matriz de Incidência")
+plt.yscale('log')
 plt.savefig('graficoGrafoEulerianoMatrizIncidencia.png')
